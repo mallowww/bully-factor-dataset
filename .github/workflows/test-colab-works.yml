@@ -37,4 +37,4 @@ jobs:
 
     # Run the notebook and check for errors
     - name: Test notebook
-      run: jupyter nbconvert --to notebook --execute --inplace prevent-the-bully.ipynb
+      run: papermill prevent-the-bully.ipynb output.ipynb --log-output --no-progress-bar && jupyter nbconvert --execute --inplace output.ipynb
