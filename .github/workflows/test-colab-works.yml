@@ -27,6 +27,10 @@ jobs:
       with:
         python-version: '3.9'
 
+    # Install Jupyter
+    - name: Install Jupyter
+      run: pip install jupyter
+
     # Install dependencies
     - name: Install dependencies
       run: pip install -r requirements.txt
